@@ -8,26 +8,30 @@
 </head>
 <body>
   <aside class='player-one-left'>
-    <h2 class='player-one-name'id="playerOne">  wins</h2>
+    <h1>Felix's Wins</h1>
+    <h2><img src="assets/catface.svg" width="100px" height="100px" alt="cat emoji" id ="#leftImg"></h2>
+    <h2 class='player-one-score'</h2>
+    </article>
     </aside>
     <section class='center-game-board'>
-      <h1 class="players-turn"id="playersTurn">It's  's turn</h1>
-      <div class="gameboard-container">
-        <section class="board" id="board-grid">
-          <div class="square" id="0"></div>
-          <div class="square" id="1"></div>
-          <div class="square" id="2"></div>
-          <div class="square" id="3"></div>
-          <div class="square" id="4"></div>
-          <div class="square" id="5"></div>
-          <div class="square" id="6"></div>
-          <div class="square" id="7"></div>
-          <div class="square" id="8"></div>
+      <h1 class="players-turn"id="playersTurn">It's  's Turn</h1>
+      <h1 class='game-winner hidden' id='displayWinner'>  is the WINNER!</h1>
+        <section class="board" id="boardGrid">
+          <div class="square zero" id="square0"></div>
+          <div class="square one" id="square1"></div>
+          <div class="square two" id="square2"></div>
+          <div class="square three" id="square3"></div>
+          <div class="square four" id="square4"></div>
+          <div class="square five" id="square5"></div>
+          <div class="square six" id="square6"></div>
+          <div class="square seven" id="square7"></div>
+          <div class="square eight" id="square8"></div>
         </section>
-      </div>
       </section>
-      <aside class='player-two'>
-        <h2 class='player-two-name'id="playerTwo">  wins</h2>
+      <aside class='player-two-right'>
+        <h1>Teddy's Wins</h1>
+        <h2><img src="assets/dogface.svg" width="100px" height="100px" alt="dog emoji" id ="#rightImg"></h2>
+        <h2 class='player-two-score></h2>
         </aside>
   <script type="text/javascript" src="./src/game.js"</script>
   <script type="text/javascript" src="./src/player.js"</script>
