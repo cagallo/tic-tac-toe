@@ -1,19 +1,20 @@
 class Player {
-  constructor(player, icon, wins) {
+  constructor(player, token) {
     this.id = player;
-    this.icon = icon;
-    this.wins = wins || 0;
+    this.token = token;
+    this.wins =  0;
+    this.winner = false;
   }
 
   saveWinsToStorage() {
-    var savedWins = JSON.parse(localStorage.getItem(this.id)) || 0;
-    savedWins = this.wins;
-    localStorage.setItem(this.id, savedWins);
-  }
+      var stringifyWins = JSON.stringify(this.wins);
+      localStorage.setItem(`${this.token} wins:`, stringifyWins);
+    };
 
-  retrieveWinsFromStorage() {
-    var savedWins = JSON.parse(localStorage.getItem(this.id)) || 0;
-    this.wins = savedWins;
-  }
+    retrieveWinsFromStorage() {
+      var retrievedWins = localStorage.getItem(`${this.token} wins:`);
+      this.wins = JSON.parse(retrievedWins) || 0;
+      return this.wins;
+    }
 
-}
+  };
