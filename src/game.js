@@ -5,9 +5,11 @@ class Game {
     this.playerTurn = this.player1;
     this.turnsTaken = 0;
     this.isDraw = false;
-    this.board = [0,1,2,
-                  3,4,5,
-                  6,7,8];
+    this.board =  [
+       '', '', '',
+       '', '', '',
+       '', '', ''
+     ];
   }
 
   nextTurn() {
@@ -23,7 +25,7 @@ class Game {
   updateGameSquare(square) {
     var gameSquare = parseInt(square);
     this.board[gameSquare] = this.playerTurn.token;
-    this.turnsTaken += 1;
+    this.turnsTaken ++;
   }
 
   checkWinningCombo(board, token) {
@@ -44,19 +46,24 @@ class Game {
     }
     checkWinner() {
     for (var i = 0; i < this.board.length; i++) {
-      var playerOne = this.checkWinningCombo(this.board, '🐱');
-      var playerTwo = this.checkWinningCombo(this.board, '🐶');
-    if (playerOne) {
+      var player1Winner = this.checkWinningCombo(this.board, '🐱');
+      var player2Winner = this.checkWinningCombo(this.board, '🐶');
+    if (player1Winner) {
         this.player1.winner = true;
         this.player1.wins++;
         return true;
-    } else if (playerTwo) {
+    } else if (player2Winner) {
         this.player2.winner = true;
         this.player2.wins++;
         return true;
     } else {
         return false;
       }
+    }
+  }
+  checkForDraw() {
+    if(this.turnsTaken === 9) {
+      this.isDraw = true;
     }
   }
 }
