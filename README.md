@@ -24,8 +24,15 @@ GitHub repository link [here](https://github.com/cagallo/tic-tac-toe).
 - Fork this project to your own Github account.
 - Clone the repository to your local machine.
 - ``cd`` into the project.
+- ``open index.html`` to open webpage.
 
 ## How It Works
 
+### Playing A Game
 
-- ``open index.html`` to open webpage.
+![Sep-28-2021 13-31-00](https://user-images.githubusercontent.com/78453792/135154166-cff71059-a1bd-488e-9b72-b9372ccb3352.gif)
+
+
+### Local Storage Saves Game Wins
+
+![Screen Shot 2021-09-28 at 1 32 09 PM](https://user-images.githubusercontent.com/78453792/135154432-e0207226-cb92-495f-a1a4-6156d1318e25.png)
