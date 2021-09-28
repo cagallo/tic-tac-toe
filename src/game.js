@@ -66,4 +66,7 @@ class Game {
       this.isDraw = true;
     }
   }
+  gameReset() {
+    location.reload();
+  }
 }
