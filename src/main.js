@@ -56,12 +56,12 @@ function displayGameWinner() {
     displayHide(displayWinner, nextPlayerTurn);
     displayWinner.innerText = `${game.player1.token} is the WINNER`;
     game.player1.saveWinsToStorage();
-    refreshBoard();
+    setTimeout(refreshBoard, 2000);
   } else if(game.player2.winner) {
     displayHide(displayWinner, nextPlayerTurn);
     displayWinner.innerText = `${game.player2.token} is the WINNER`;
     game.player2.saveWinsToStorage();
-    refreshBoard();
+    setTimeout(refreshBoard, 2000);
   }
   changePlayerScore();
 }
@@ -75,7 +75,7 @@ function displayGameDraw() {
   if(game.isDraw) {
     displayHide(displayWinner, nextPlayerTurn);
     displayWinner.innerText = `It's a draw!`;
-    refreshBoard();
+    setTimeout(refreshBoard, 2000);
   }
 }
 
