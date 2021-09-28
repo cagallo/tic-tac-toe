@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang= 'en'>
+<html lang='en'>
 <head>
   <meta charset='UTF-8'>
   <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap' rel='stylesheet'>
@@ -9,32 +9,36 @@
 <body>
   <aside class='player-one-left'>
     <h1>Felix's Wins</h1>
-    <h2><img src="assets/catface.svg" width="100px" height="100px" alt="cat emoji" id ="#leftImg"></h2>
-    <h2 class='player-one-score'</h2>
+    <h2>🐱</h2>
+    <article class='win-container'>
+      <p class="player-one-score" id="playerOneScore"></p>
     </article>
-    </aside>
-    <section class='center-game-board'>
-      <h1 class="players-turn"id="playersTurn">It's  's Turn</h1>
-      <h1 class='game-winner hidden' id='displayWinner'>  is the WINNER!</h1>
-        <section class="board" id="boardGrid">
-          <div class="square zero" id="square0"></div>
-          <div class="square one" id="square1"></div>
-          <div class="square two" id="square2"></div>
-          <div class="square three" id="square3"></div>
-          <div class="square four" id="square4"></div>
-          <div class="square five" id="square5"></div>
-          <div class="square six" id="square6"></div>
-          <div class="square seven" id="square7"></div>
-          <div class="square eight" id="square8"></div>
-        </section>
-      </section>
-      <aside class='player-two-right'>
-        <h1>Teddy's Wins</h1>
-        <h2><img src="assets/dogface.svg" width="100px" height="100px" alt="dog emoji" id ="#rightImg"></h2>
-        <h2 class='player-two-score></h2>
-        </aside>
-  <script type="text/javascript" src="./src/game.js"</script>
-  <script type="text/javascript" src="./src/player.js"</script>
-  <script type="text/javascript" src="./src/main.js"></script>
+  </aside>
+  <section class='center-game-board'>
+    <h1 class="players-turn" id="playersTurn">It's 🐱's Turn</h1>
+    <h1 class='game-winner hidden' id='displayWinner'> is the WINNER!</h1>
+    <section class="board" id="boardGrid">
+      <div class="square zero" id="0"></div>
+      <div class="square one" id="1"></div>
+      <div class="square two" id="2"></div>
+      <div class="square three" id="3"></div>
+      <div class="square four" id="4"></div>
+      <div class="square five" id="5"></div>
+      <div class="square six" id="6"></div>
+      <div class="square seven" id="7"></div>
+      <div class="square eight" id="8"></div>
+    </section>
+    <button class="reset-button" id="resetButton">Reset Game</button>
+  </section>
+  <aside class='player-two-right'>
+    <h1>Ted's Wins</h1>
+    <h2>🐶</h2>
+    <article class="win-count">
+      <p class="player-two-score" id="playerTwoScore"></p>
+    </article>
+  </aside>
+  <script src="./src/game.js"></script>
+  <script src="./src/player.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>
