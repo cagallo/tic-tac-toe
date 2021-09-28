@@ -32,6 +32,7 @@ GitHub repository link [here](https://github.com/cagallo/tic-tac-toe).
 
 ![Sep-28-2021 13-31-00](https://user-images.githubusercontent.com/78453792/135154166-cff71059-a1bd-488e-9b72-b9372ccb3352.gif)
 
+** Goes back to 0 because GIF loops back to beginning.
 
 ### Local Storage Saves Game Wins
 
