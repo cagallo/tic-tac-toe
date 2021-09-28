@@ -22,10 +22,10 @@ boardGrid.addEventListener('click', function(event) {
 /* Functions */
 
 function displayPlayerWins() {
-    game.playerOne.retrieveWinsFromStorage();
-    game.playerTwo.retrieveWinsFromStorage();
-    playerOneScore.innerText = `${game.playerOne.wins}`;
-    playerTwoScore.innerText = `${game.playerTwo.wins}`;
+    game.player1.retrieveWinsFromStorage();
+    game.player2.retrieveWinsFromStorage();
+    playerOneScore.innerText = `${game.player1.wins}`;
+    playerTwoScore.innerText = `${game.player2.wins}`;
   }
 
   function clickSquare(event) {
@@ -45,11 +45,22 @@ function displayPlayerWins() {
 function checkGameStatus() {
   game.checkForWinner();
   game.checkForDraw();
-  displayResults();
+  displayGameWinner();
+  displayGameDraw();
 }
 
-function displayResults() {
-  
+function displayGameWinner() {
+  if(game.player1.winner) {
+    displayHide(displayWinner, nextPlayerTurn);
+    displayWinner.innerText = `${game.player1.token} is the WINNER`;
+    game.player1.saveWinsToStorage();
+    refreshBoard();
+  } else if(game.player2.winner) {
+    displayHide(displayWinner, nextPlayerTurn);
+    displayWinner.innerText = `${game.player2.token} is the WINNER`;
+    game.player2.saveWinsToStorage();
+    refreshBoard();
+  }
 }
 
 function displayHide(display, hide) {
