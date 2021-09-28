@@ -18,6 +18,7 @@ window.addEventListener('load', displayPlayerWins);
 boardGrid.addEventListener('click', function(event) {
   clickSquare(event);
 });
+resetButton.addEventListener('click', refreshBoard);
 
 /* Functions */
 
@@ -39,11 +40,12 @@ function displayPlayerWins() {
     } else if(gridSquare) {
       boardGrid.removeEventListener('click', clickSquare);
     }
+    checkStatus();
   }
 
 
-function checkGameStatus() {
-  game.checkForWinner();
+function checkStatus() {
+  game.checkWinner();
   game.checkForDraw();
   displayGameWinner();
   displayGameDraw();
@@ -61,9 +63,38 @@ function displayGameWinner() {
     game.player2.saveWinsToStorage();
     refreshBoard();
   }
+  changePlayerScore();
 }
 
-function displayHide(display, hide) {
-  display.classList.remove('hidden');
-  hide.classList.add('hidden');
+function changePlayerScore() {
+  playerOneScore.innerText = `${game.player1.wins}`;
+  playerTwoScore.innerText = `${game.player2.wins}`;
+}
+
+function displayGameDraw() {
+  if(game.isDraw) {
+    displayHide(displayWinner, nextPlayerTurn);
+    displayWinner.innerText = `It's a draw!`;
+    refreshBoard();
+  }
+}
+
+function refreshBoard() {
+  if(game.isDraw === true || game.checkWinner) {
+    game.gameReset();
+  }
+}
+
+
+function displayHide() {
+  show(displayWinner);
+  hide(nextPlayerTurn);
+}
+
+function show(element) {
+  element.classList.remove('hidden');
+}
+
+function hide(element) {
+  element.classList.add('hidden');
 }
