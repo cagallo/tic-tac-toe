@@ -24,20 +24,21 @@ div {
   font-size: 50px;
 }
 
-h1 {
+/* h1 {
   margin-top: 15%;
-}
+} */
 
 h2 {
   font-size: 65px;
 }
 
 
-.players-turn {
+.players-turn
+.game-winner {
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 3%;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .player-one-left,
@@ -117,7 +118,7 @@ h2 {
 }
 
 .reset-button {
-  margin-top: 7%;
+  margin-top: 5%;
   background: transparent;
   border-radius: 8px;
   border-style: solid;
@@ -127,7 +128,7 @@ h2 {
   width: 23%;
 }
 
-button:hover {
+.reset-button:hover {
   background-color: white;
 }
 
