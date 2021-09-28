@@ -14,10 +14,10 @@ class Game {
 
   nextTurn() {
     if(this.playerTurn === this.player1) {
-    return this.playerTurn = this.player2;
+    this.playerTurn = this.player2;
     nextPlayerTurn.innerText = `It's ${game.playerTurn.token}'s turn!`
     } else {
-   return this.playerTurn = this.player1;
+   this.playerTurn = this.player1;
     nextPlayerTurn.innerText = `It's ${game.playerTurn.token}'s turn!`
     }
   }
