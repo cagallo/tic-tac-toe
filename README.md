@@ -24,4 +24,8 @@ GitHub repository link [here](https://github.com/cagallo/tic-tac-toe).
 - Fork this project to your own Github account.
 - Clone the repository to your local machine.
 - ``cd`` into the project.
+
+## How It Works
+
+
 - ``open index.html`` to open webpage.
