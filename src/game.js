@@ -45,20 +45,20 @@ class Game {
      }
   }
 
-    checkWinner() {
-        for (var i = 0; i < this.board.length; i++) {
-          var player1Winner = this.checkWinningCombo(this.board, '🐱');
-          var player2Winner = this.checkWinningCombo(this.board, '🐶');
-        if (player1Winner) {
-          this.player1.winner = true;
-          this.player1.wins++;
-          return true;
-      } else if (player2Winner) {
-          this.player2.winner = true;
-          this.player2.wins++;
-          return true;
-      } else {
-          return false;
+  checkWinner() {
+    for (var i = 0; i < this.board.length; i++) {
+      var player1Winner = this.checkWinningCombo(this.board, '🐱');
+      var player2Winner = this.checkWinningCombo(this.board, '🐶');
+    if (player1Winner) {
+      this.player1.winner = true;
+      this.player1.wins++;
+      return true;
+    } else if (player2Winner) {
+      this.player2.winner = true;
+      this.player2.wins++;
+      return true;
+    } else {
+      return false;
       }
     }
   }
