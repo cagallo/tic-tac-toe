@@ -23,26 +23,25 @@ resetButton.addEventListener('click', refreshBoard);
 /* Functions */
 
 function displayPlayerWins() {
-    game.player1.retrieveWinsFromStorage();
-    game.player2.retrieveWinsFromStorage();
-    playerOneScore.innerText = `${game.player1.wins}`;
-    playerTwoScore.innerText = `${game.player2.wins}`;
-  }
+  game.player1.retrieveWinsFromStorage();
+  game.player2.retrieveWinsFromStorage();
+  playerOneScore.innerText = `${game.player1.wins}`;
+  playerTwoScore.innerText = `${game.player2.wins}`;
+}
 
-  function clickSquare(event) {
-    var gridSquare = event.target;
-    var gridSquareId = event.target.id;
-    if(gridSquare.innerText === '') {
-      gridSquare.innerText = `${game.playerTurn.token}`;
-      console.log(gridSquare);
-      game.updateGameSquare(gridSquareId);
-      game.nextTurn();
-    } else if(gridSquare) {
+function clickSquare(event) {
+  var gridSquare = event.target;
+  var gridSquareId = event.target.id;
+  if(gridSquare.innerText === '') {
+    gridSquare.innerText = `${game.playerTurn.token}`;
+    console.log(gridSquare);
+    game.updateGameSquare(gridSquareId);
+    game.nextTurn();
+  } else if(gridSquare) {
       boardGrid.removeEventListener('click', clickSquare);
-    }
-    checkStatus();
   }
-
+  checkStatus();
+}
 
 function checkStatus() {
   game.checkWinner();
@@ -84,7 +83,6 @@ function refreshBoard() {
     game.gameReset();
   }
 }
-
 
 function displayHide() {
   show(displayWinner);
