@@ -30,10 +30,17 @@ GitHub repository link [here](https://github.com/cagallo/tic-tac-toe).
 
 ### Playing A Game
 
-![Sep-28-2021 13-31-00](https://user-images.githubusercontent.com/78453792/135154166-cff71059-a1bd-488e-9b72-b9372ccb3352.gif)
+
+![Sep-28-2021 19-38-23](https://user-images.githubusercontent.com/78453792/135188447-281ec256-aee6-40d6-b1f9-dbc35e3d3568.gif)
 
 ** Goes back to 0 because GIF loops back to beginning.
 
 ### Local Storage Saves Game Wins
 
 ![Screen Shot 2021-09-28 at 1 32 09 PM](https://user-images.githubusercontent.com/78453792/135154432-e0207226-cb92-495f-a1a4-6156d1318e25.png)
+
+## Project Wins and Challenges
+
+I felt fairly comfortable with using classes/data model and connecting it to the DOM. Playing the game on the console prior to connecting the data model to the DOM was very informative. I felt like the project was a good finale that connected everything we've learned in Mod 1.
+
+I had challenges with the CSS layout and responsive design. I had issues with getting the board the right size without affecting the grid and the tokens. I was also not great with creating branches and pull requests for this project. I need to work more on my git workflow; just because I'm working alone doesn't mean that I can slack on it.
