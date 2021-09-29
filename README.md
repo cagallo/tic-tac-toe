@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+# Tic-Tac-Toe 🐱 🐶
 
 Fully deployed site [here](https://cagallo.github.io/tic-tac-toe/)!
 
