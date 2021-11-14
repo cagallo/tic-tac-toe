@@ -46,6 +46,9 @@ class Game {
   }
 
   checkWinner() {
+    if (this.player1.winner || this.player2.winner)
+      return;
+
     for (var i = 0; i < this.board.length; i++) {
       var player1Winner = this.checkWinningCombo(this.board, '🐱');
       var player2Winner = this.checkWinningCombo(this.board, '🐶');
@@ -64,12 +67,16 @@ class Game {
   }
 
   checkForDraw() {
-    if(this.turnsTaken === 9) {
+    if (this.isDraw)
+      return;
+
+    if(this.turnsTaken === 9 && !this.checkWinner()) {
       this.isDraw = true;
     }
   }
 
   gameReset() {
+    localStorage.clear();
     location.reload();
   }
 }
