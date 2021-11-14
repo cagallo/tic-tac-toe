@@ -32,9 +32,8 @@ function displayPlayerWins() {
 function clickSquare(event) {
   var gridSquare = event.target;
   var gridSquareId = event.target.id;
-  if(gridSquare.innerText === '') {
+  if(gridSquare.innerText === '' && !game.player1.winner && !game.player2.winner) {
     gridSquare.innerText = `${game.playerTurn.token}`;
-    console.log(gridSquare);
     game.updateGameSquare(gridSquareId);
     game.nextTurn();
   } else if(gridSquare) {
@@ -42,6 +41,7 @@ function clickSquare(event) {
   }
   checkStatus();
 }
+
 
 function checkStatus() {
   game.checkWinner();
@@ -83,6 +83,7 @@ function refreshBoard() {
     game.gameReset();
   }
 }
+
 
 function displayHide() {
   show(displayWinner);
